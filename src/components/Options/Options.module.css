@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.btn {
+  min-width: 48px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  &:hover,
+  &:focus {
+    color: black;
+    background-color: grey;
+  }
+}

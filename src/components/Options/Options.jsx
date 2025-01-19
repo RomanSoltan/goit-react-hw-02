@@ -1,3 +1,5 @@
+import s from './Options.module.css';
+
 const Options = ({
   voteData,
   updateFeedback,
@@ -7,15 +9,19 @@ const Options = ({
   const btnOptions = Object.keys(voteData);
 
   return (
-    <ul>
+    <ul className={s.list}>
       {btnOptions.map(option => (
         <li key={crypto.randomUUID()}>
-          <button onClick={() => updateFeedback(option)}>{option}</button>
+          <button className={s.btn} onClick={() => updateFeedback(option)}>
+            {option}
+          </button>
         </li>
       ))}
       {totalFeedback > 0 && (
         <li>
-          <button onClick={() => handleResetVoteData()}>reset</button>
+          <button className={s.btn} onClick={() => handleResetVoteData()}>
+            reset
+          </button>
         </li>
       )}
     </ul>

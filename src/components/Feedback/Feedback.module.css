@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.descr {
+  font-size: 18px;
+  font-weight: 500;
+}

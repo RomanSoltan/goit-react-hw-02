@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.descr {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+}

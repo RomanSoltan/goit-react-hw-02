@@ -1,7 +1,9 @@
+import s from './Notification.module.css';
+
 const Notification = () => {
   return (
     <div>
-      <p>No feedback yet</p>
+      <p className={s.descr}>No feedback yet</p>
     </div>
   );
 };

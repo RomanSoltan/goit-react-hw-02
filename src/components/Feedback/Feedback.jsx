@@ -1,20 +1,22 @@
+import s from './Feedback.module.css';
+
 const Feedback = ({ voteData, totalFeedback, positiveFeedback }) => {
   const btnOptions = Object.keys(voteData);
 
   return (
-    <ul>
+    <ul className={s.list}>
       {btnOptions.map(item => (
         <li key={crypto.randomUUID()}>
-          <p>
-            {item}: {voteData[item]}
+          <p className={s.descr}>
+            {item}: <span className={s.span}>{voteData[item]}</span>
           </p>
         </li>
       ))}
       <li>
-        <p>Total: {totalFeedback}</p>
+        <p className={s.descr}>Total: {totalFeedback}</p>
       </li>
       <li>
-        <p>Positive: {positiveFeedback}%</p>
+        <p className={s.descr}>Positive: {positiveFeedback}%</p>
       </li>
     </ul>
   );
