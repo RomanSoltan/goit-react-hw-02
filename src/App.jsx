@@ -6,6 +6,12 @@ import Options from './components/Options/Options';
 import Notification from './components/Notification/Notification';
 
 const App = () => {
+  const defaultData = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
+
   const [voteData, setVoteData] = useState(() => {
     const storageData = JSON.parse(localStorage.getItem('voteData'));
     if (storageData) {
@@ -13,12 +19,6 @@ const App = () => {
     }
     return defaultData;
   });
-
-  const defaultData = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
 
   useEffect(() => {
     localStorage.setItem('voteData', JSON.stringify(voteData));
